@@ -24,11 +24,15 @@ namespace WebApplication1.Account
             if (IsLatchOperationOpen(username, ConfigurationManager.AppSettings["Login"]))
             {
                 lb_login.Text = "El LATCH de la operación LOGIN está abierto";
+                lb_login.ForeColor = System.Drawing.Color.Blue;
+                lb_login.Font.Bold = true;
                 this.LoginUser.Enabled = true;
             }
             else
             {
                 lb_login.Text = "El LATCH de la operación LOGIN está cerrado";
+                lb_login.ForeColor = System.Drawing.Color.Red;
+                lb_login.Font.Bold = true;
                 this.LoginUser.Enabled = false;
             }
 

@@ -37,11 +37,15 @@ namespace WebApplication1.Account
                 if (IsLatchOperationOpen(username, ConfigurationManager.AppSettings["ChangePassword"]))
                 {
                     lb_changepassword.Text = "El LATCH de la operación Cambio de contraseña está abierto";
+                    lb_changepassword.ForeColor = System.Drawing.Color.Blue;
+                    lb_changepassword.Font.Bold = true;
                     this.ChangeUserPassword.Enabled = true;
                 }
                 else
                 {
                     lb_changepassword.Text = "El LATCH de la operación Cambio de contraseña está cerrado";
+                    lb_changepassword.ForeColor = System.Drawing.Color.Red;
+                    lb_changepassword.Font.Bold = true;
                     this.ChangeUserPassword.Enabled = false;
                 }
         }
