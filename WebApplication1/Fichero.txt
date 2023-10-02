@@ -1,1 +1,2 @@
 Este es un fichero plano.
+Lo he modificado en git.
